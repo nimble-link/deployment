@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+  labels:
+    app: nimblelink
+spec:
+  selector:
+    app: nimblelink
+    tier: backend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
