@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: database-service
+  labels:
+    app: nimblelink
+    tier: database
+spec:
+  selector:
+    app: nimblelink
+    tier: database
+  ports:
+  - protocol: TCP
+    port: 5432
+    targetPort: 5432

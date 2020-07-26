@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config-map
+data:
+  APP_ADDR: ":8080"
+  APP_RUN_MODE: debug
+  DB_CONNECTION: postgres
+  DB_HOST: database-service
+  DB_PORT: "5432"
+  DB_DATABASE: backend
