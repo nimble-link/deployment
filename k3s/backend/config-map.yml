@@ -4,8 +4,10 @@ metadata:
   name: backend-config-map
 data:
   APP_ADDR: ":8080"
-  APP_RUN_MODE: debug
+  APP_RUN_MODE: release
+  APP_ENV: release
   DB_CONNECTION: postgres
   DB_HOST: database-service
   DB_PORT: "5432"
   DB_DATABASE: backend
+  OAUTH2_REDIRECT_URL: http://localhost:8080/oauth2/callback
