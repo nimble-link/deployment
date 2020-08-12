@@ -1,0 +1,11 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: namtx-dev-letsencrypt-cert
+spec:
+  secretName: namtx-dev-letsencrypt-tls
+  issuerRef:
+    name: letsencrypt-prod-issuer
+    kind: ClusterIssuer
+  dnsNames:
+  - namtx.dev
