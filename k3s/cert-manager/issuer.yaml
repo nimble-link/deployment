@@ -1,0 +1,17 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-prod-issuer
+spec:
+  acme:
+    email: xuannam2620@gmail.com
+    server: https://acme-v02.api.letsencrypt.org/directory
+    privateKeySecretRef:
+      name: letsencrypt-issuer-account-key
+    solvers:
+    - dns01:
+        clouddns:
+          project: tf-test-286005
+          serviceAccountSecretRef:
+            name: clouddns-dns01-solver-svc-acct
+            key: key.json
