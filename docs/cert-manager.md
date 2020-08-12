@@ -195,11 +195,11 @@ spec:
       name: letsencrypt-issuer-account-key
     solvers:
     - dns01:
-	clouddns:
-    project: tf-test-xxxx
-    serviceAccountSecretRef:
-      name: clouddns-dns01-solver-svc-acct
-      key: key.json
+        clouddns:
+          project: tf-test-xxxx
+          serviceAccountSecretRef
+            name: clouddns-dns01-solver-svc-acct
+            key: key.json
 ```
 
 About DNS01 Challenge for Google CloudDNS please refer: [https://cert-manager.io/docs/configuration/acme/dns01/google/](https://cert-manager.io/docs/configuration/acme/dns01/google/)
