@@ -9,3 +9,4 @@ spec:
     kind: ClusterIssuer
   dnsNames:
   - namtx.dev
+  - backend.namtx.dev

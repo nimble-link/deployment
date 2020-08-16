@@ -52,6 +52,14 @@ $ k3sup install \
 	--user $(whoami)
 ```
 
+In case, you want to replace `Ingress Controller` to `Nginx` instead of `Traefik`, you can add `--k3s-extra-args '--no-traefik'` parameter
+
+and install Nginx ingress controller by
+
+```bash
+$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-0.32.0/deploy/static/provider/cloud/deploy.yaml
+```
+
 ##### Config firewall-rules for all nodes
 ```bash
 $ gcloud compute firewall-rules create k3s --allow=tcp:6443 --target-tags=k3s

@@ -1,13 +1,33 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: nginx-ingress
+  name: nimblelink-backend-ingress
+spec:
+  rules:
+  - host: backend.namtx.dev
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: backend-service
+          servicePort: 80
+  tls:
+  - hosts:
+    - backend.namtx.dev
+    secretName: namtx-dev-letsencrypt-tls
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: nimblelink-frontend-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /api/v1/links/$1
 spec:
   rules:
   - host: namtx.dev
     http:
       paths:
-      - path: /
+      - path: /(.+)
         backend:
           serviceName: backend-service
           servicePort: 80

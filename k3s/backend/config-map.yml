@@ -10,4 +10,4 @@ data:
   DB_HOST: database-service
   DB_PORT: "5432"
   DB_DATABASE: backend
-  OAUTH2_REDIRECT_URL: https://namtx.dev/oauth2/callback
+  OAUTH2_REDIRECT_URL: https://nimble-link-web.vercel.app/login
