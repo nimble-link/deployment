@@ -2,3 +2,5 @@ vagrant/.vagrant/
 vagrant/ubuntu-bionic-18.04-cloudimg-console.log
 key.json
 kubeconfig
+terraform/tf-test-ed6504a783a7.json
+terraform/.terraform
