@@ -10,3 +10,4 @@ spec:
   dnsNames:
   - namtx.dev
   - backend.namtx.dev
+  - app.namtx.dev
